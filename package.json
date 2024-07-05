@@ -1,0 +1,33 @@
+{
+  "name": "@polyrepo/api-adapter",
+  "description": "Adapter for api calls",
+  "module": "src/index.ts",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "lint": "bunx @biomejs/biome format --write ./ && git add . && bunx @biomejs/biome lint ./",
+    "ts": "tsc --noemit --skipLibCheck --incremental --tsBuildInfoFile './node_modules/.tsbuildinfo'",
+    "pre-commit": "bun lint && bun ts && bun test",
+    "prepare": "husky install",
+    "unbuild": "bunx unbuild"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@types/bun": "latest",
+    "husky": "^9.0.11"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {}
+}

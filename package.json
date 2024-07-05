@@ -16,6 +16,7 @@
   },
   "polyCopy": {
     "@polyrepo/template-bun": [
+      ".github",
       "LICENSE",
       ".gitignore",
       "biome.json",

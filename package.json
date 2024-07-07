@@ -42,5 +42,6 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {},
-  "private": false
+  "private": false,
+  "version": "1.0.0"
 }

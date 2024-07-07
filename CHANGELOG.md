@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/polyrepos/api-adapter/compare/v1.0.0...v1.0.1) (2024-07-07)
+
+
+### Bug Fixes
+
+* update template ([a8b8295](https://github.com/polyrepos/api-adapter/commit/a8b8295067f2c1c535c1579d6710c6477f87ae63))
+
 ## 1.0.0 (2024-07-07)
 
 

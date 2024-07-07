@@ -1,0 +1,29 @@
+name: test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout bun
+        uses: actions/checkout@v4
+      - name: Install bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Get the last commit message
+        id: get_commit
+        run: echo "::set-output name=message::$(git log -1 --pretty=%B)"
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Test
+        if: env.GOON == 'true'
+        run: bun pre-commit

@@ -17,7 +17,7 @@ export function bunServerAdapter(...middlewares: (ServerMiddleware | null)[]) {
 		let bodyJson: any;
 		try {
 			bodyJson = JSON.parse(bodyRow);
-		} catch (e) {
+		} catch (_e) {
 			bodyJson = {};
 		}
 		const ctx: ServerMiddlewareContext = {

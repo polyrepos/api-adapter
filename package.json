@@ -15,7 +15,8 @@
     }
   },
   "polyCopy": {
-    "@polyrepo/template-bun": [
+    "@polyrepo/template-base": [
+      "package.json.merge",
       ".github",
       "LICENSE",
       ".gitignore",
@@ -40,5 +41,6 @@
   "peerDependencies": {
     "typescript": "^5.5.3"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "private": false
 }

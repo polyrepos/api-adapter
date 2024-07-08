@@ -1,9 +1,11 @@
 {
   "name": "@polyrepo/api-adapter",
+  "version": "1.0.1",
   "description": "Adapter for api calls",
+  "private": false,
+  "main": "./dist/index.cjs",
   "module": "src/index.ts",
   "type": "module",
-  "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -13,6 +15,13 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
+  },
+  "scripts": {
+    "lint": "bunx @biomejs/biome format --write ./ && git add . && bunx @biomejs/biome lint ./",
+    "ts": "tsc --noemit --skipLibCheck --incremental --tsBuildInfoFile './node_modules/.tsbuildinfo'",
+    "precommit": "bun lint && bun ts && bun test",
+    "prepare": "husky install",
+    "unbuild": "bunx unbuild"
   },
   "polyCopy": {
     "@polyrepo/template-base": [
@@ -26,13 +35,7 @@
       "tsconfig.ci.json"
     ]
   },
-  "scripts": {
-    "lint": "bunx @biomejs/biome format --write ./ && git add . && bunx @biomejs/biome lint ./",
-    "ts": "tsc --noemit --skipLibCheck --incremental --tsBuildInfoFile './node_modules/.tsbuildinfo'",
-    "precommit": "bun lint && bun ts && bun test",
-    "prepare": "husky install",
-    "unbuild": "bunx unbuild"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@types/bun": "latest",
@@ -40,8 +43,5 @@
   },
   "peerDependencies": {
     "typescript": "^5.5.3"
-  },
-  "dependencies": {},
-  "private": false,
-  "version": "1.0.1"
+  }
 }

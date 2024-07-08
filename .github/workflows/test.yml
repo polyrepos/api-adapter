@@ -26,4 +26,4 @@ jobs:
 
       - name: Test
         if: env.GOON == 'true'
-        run: bun pre-commit
+        run: bun precommit

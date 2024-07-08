@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-bun pre-commit
+bun precommit
 # bun run version-bump && git add package.json

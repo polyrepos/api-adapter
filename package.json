@@ -29,7 +29,7 @@
   "scripts": {
     "lint": "bunx @biomejs/biome format --write ./ && git add . && bunx @biomejs/biome lint ./",
     "ts": "tsc --noemit --skipLibCheck --incremental --tsBuildInfoFile './node_modules/.tsbuildinfo'",
-    "pre-commit": "bun lint && bun ts && bun test",
+    "precommit": "bun lint && bun ts && bun test",
     "prepare": "husky install",
     "unbuild": "bunx unbuild"
   },

@@ -6,10 +6,10 @@
 			"DOM",
 			"ES2023"
 		],
-		"baseUrl": ".",
+		"baseUrl": "..",
 		"paths": {
 			"@polyrepo/*": [
-				"../*/src"
+				"./*/src"
 			]
 		},
 		"target": "ESNext",
